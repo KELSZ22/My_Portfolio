@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()> <a href=" "> <img src="images/close_icon.svg" alt=""></a> </li>
+            <li> <a href=""> <img src="images/logo.png" alt="LOGO" height="30px" width="30px"></a> </li>
+            <li> <a href=""> HOME</a> </li>
+            <li> <a href=" "> RESUME</a> </li>
+            <li> <a href=" "> CONTACT</a> </li>
+            <li> <a href=" "> ABOUT</a> </li>
+        
+        </ul>
+
+        <ul>
+            <li class="hide-mobile"> <a href=""> <img src="images/logo.png" alt="LOGO" height="30px" width="30px"></a> </li>
+            <li class="hide-mobile"> <a href=""> HOME</a> </li>
+            <li class="hide-mobile"> <a href=" "> RESUME</a> </li>
+            <li class="hide-mobile"> <a href=" "> CONTACT</a> </li>
+            <li class="hide-mobile"> <a href=" "> ABOUT</a> </li>
+            <li class="hide-mobile">  <img src="images/dark_mode.svg" alt="light_mode" id="icon"> </li>
+            <li onclick=showSidebar()><a href="#"> <img src="images/menu_icon.svg" alt="" class="menu-icon"></a></li>
+
+        </ul>
+
+
+    </nav>
+
+
+    <div class="content">
+        
+        <img src="images/michael_pogi_talaga.jpg" alt="michael_pogi_talaga.jpg" width="300px" class="image_display">
+
+        <div class="paragraph">
+
+        <p> HI I'M</p>
+        <p>MICHAEL Z.SABINO</p>
+        <p>WEB DEVELOPER</p>
+        </div>
+
+        
+
+    </div>
+   
+
+
+  
+
+
+<script src="index.js"> </script>
+
+<script>    
+    function showSidebar() {
+
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+
+        function hideSidebar() {
+
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+
+</script>
+
+</body>
+</html>
