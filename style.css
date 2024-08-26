@@ -1,65 +1,55 @@
 *{
     padding: 0;
     margin: 0;
-}
-
-:root{
-
-    --bg-color:#e3e3e3;
-    --font-style: Arial, Helvetica, sans-serif;
-    --nav-bg:rgb(241, 241, 241);
-    --font-color:rgb(21, 0, 31);
-
-}
-
-body{
-
-    background-color: var(--bg-color);
-    font-family: var(--font-style);
-    background-image: url("images/michaelpogi.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-
+    box-sizing: border-box;
 }
 
 
+
+body {
+
+    background-color: antiquewhite;
+}
 
 nav{
-    background-color: var(--nav-bg);
-    box-shadow: 5px 5px 2px 1px rgba(97, 97, 97, 0.2);
-}
 
-
-nav ul{
-    max-width: 100%;
+    padding: 10px 30px;
     display: flex;
-    list-style: none;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: space-between;
+    background: #004274;
+    position: relative;
+    height: 70px;
 }
 
-nav li{
-    height: 50px;
-}
-
-nav a{
-    height: 100%;
+nav ul {
     display: flex;
+    gap: 30px;
+    align-items: center;
+    
+}
+
+nav li {
+
+    list-style-type: none;
+
+
+}
+
+nav a {
     text-decoration: none;
-    padding: 0px 20px;
-    align-items: center;
-    color:var(--font-color);
+    color: #fff;
+
 }
 
-nav li:first-child{
-
-    margin-right: auto;
-    padding-left: 50px;
+.menu-icon{
+    display: none;
 }
 
-nav li:last-child{
-    margin-right: 20px;
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+    display: inline;
 }
 
 .dark-mode{
@@ -67,90 +57,38 @@ nav li:last-child{
     transition-duration: 1s;
 
     --nav-bg:rgb(21, 0, 31);
-    --bg-color:rgb(21,0,31);   
-    --font-color:#F89F5B;
-}
-
-#icon{
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.image_display{
-    border-radius: 68px;
-    box-shadow: 5px 5px 2px 1px rgba(97, 97, 97, 0.2);  
-    margin-left: 30%;
-    margin-top: 10%;
-    margin-right: auto;
-}
-
-.paragraph{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-right: 50%;
-    margin-left: 10%;
-    color:#2C0063;
+    background-image: linear-gradient(284deg, #02032FFF 0%, #202020FF 100%);
+     --font-color:#F89F5B;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+    height: 100%;
 
 }
 
-p:nth-child(2){
-    font-size: 3em;
-}
 
-
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(226, 226, 226, 0.7);
-    backdrop-filter:blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-}
-
-.sidebar li{
-
-    width: 100%;
-}
-.sidebar a{
-    width: 100%;
-}
-
-.menu-icon{
-    display: none;
-}
-
-@media screen and (max-width:550px) {
-
-    .hide-mobile{
-        display: none;
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
     }
-
-    .sidebar{
-        width: 100%;
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
     }
-    .menu-icon {
-            display: flex;
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+
     }
-
-       
-     }
-    
-
-
-
+    #menuList{
+        transition: all 0.5s;
+    }
+}

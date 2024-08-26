@@ -11,65 +11,45 @@
 <body>
 
     <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()> <a href=" "> <img src="images/close_icon.svg" alt=""></a> </li>
-            <li> <a href=""> <img src="images/logo.png" alt="LOGO" height="30px" width="30px"></a> </li>
-            <li> <a href=""> HOME</a> </li>
-            <li> <a href=" "> RESUME</a> </li>
-            <li> <a href=" "> CONTACT</a> </li>
-            <li> <a href=" "> ABOUT</a> </li>
-        
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+        <ul id="menuList">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
-
-        <ul>
-            <li class="hide-mobile"> <a href=""> <img src="images/logo.png" alt="LOGO" height="30px" width="30px"></a> </li>
-            <li class="hide-mobile"> <a href=""> HOME</a> </li>
-            <li class="hide-mobile"> <a href=" "> RESUME</a> </li>
-            <li class="hide-mobile"> <a href=" "> CONTACT</a> </li>
-            <li class="hide-mobile"> <a href=" "> ABOUT</a> </li>
-            <li class="hide-mobile">  <img src="images/dark_mode.svg" alt="light_mode" id="icon"> </li>
-            <li onclick=showSidebar()><a href="#"> <img src="images/menu_icon.svg" alt="" class="menu-icon"></a></li>
-
-        </ul>
-
+        <div class="menu-icon">
+            <li><img src="images/dark_mode.svg" alt="" class="dark-mode"></li>
+            <li onclick="toggleMenu()"><img src="images/menu_icon.svg" alt="" class="menu-icon"></li>
+        </div>
     </nav>
 
-
-    <div class="content">
-        
-        <img src="images/michael_pogi_talaga.jpg" alt="michael_pogi_talaga.jpg" width="300px" class="image_display">
-
-        <div class="paragraph">
-
-        <p> HI I'M</p>
-        <p>MICHAEL Z.SABINO</p>
-        <p>WEB DEVELOPER</p>
-        </div>
-
-        
-
-    </div>
    
 
 
-  
+            <marquee behavior="" direction="" style="font-size: 5em;"> YOW SHAWN</marquee>
+
+
 
 
 <script src="index.js"> </script>
 
-<script>    
-    function showSidebar() {
+<script>
+    let menuList = document.getElementById("menuList")
+menuList.style.maxHeight = "0px";
 
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
+function toggleMenu(){
+    if(menuList.style.maxHeight == "0px")
+    {
+        menuList.style.maxHeight = "300px";
     }
-
-        function hideSidebar() {
-
-                const sidebar = document.querySelector('.sidebar')
-                sidebar.style.display = 'none'
-            }
-
+    else{
+        menuList.style.maxHeight = "0px";
+    }
+}
 </script>
 
 </body>
