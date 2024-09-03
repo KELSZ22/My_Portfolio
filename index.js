@@ -15,3 +15,15 @@ darkMode.onclick = function() {
         }
 
 }
+
+
+function showNav(){
+
+    const nav = document.querySelector('nav ul');
+    nav.style.display = 'flex';
+}
+function closeNav(){
+
+    const nav = document.querySelector('nav ul');
+    nav.style.display = 'none';
+}
