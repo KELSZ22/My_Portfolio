@@ -8,7 +8,7 @@ let navLinks = document.querySelector('nav ul');
     {
     navLinks.classList.toggle('active');
 
-    if(navLinks.classList.contains(navLinks)){
+    if(navLinks.classList.contains('active')){
 
         menuIcon.src="images/close_icon.svg";
         let nav=true;
