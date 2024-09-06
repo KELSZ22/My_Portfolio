@@ -1,29 +1,25 @@
-var darkMode = document.getElementById("darkMode");
-
-darkMode.onclick = function() {
 
 
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        darkMode.src="images/light_mode.svg";
+let menuIcon = document.getElementById('menu-icon');
+let navLinks = document.querySelector('nav ul');
 
 
-        }
-        else{
-            darkMode.src="images/dark_mode.svg";
+    menuIcon.addEventListener('click', function() 
+    {
+    navLinks.classList.toggle('active');
 
-        }
+    if(navLinks.classList.contains(navLinks)){
 
-}
+        menuIcon.src="images/close_icon.svg";
+        let nav=true;
+        console.log(nav);
 
+    }
+    else{
+        menuIcon.src="images/menu_icon.svg";
+           let nav=false;
+        console.log(nav);
 
-function showNav(){
+    }
 
-    const nav = document.querySelector('nav ul');
-    nav.style.display = 'flex';
-}
-function closeNav(){
-
-    const nav = document.querySelector('nav ul');
-    nav.style.display = 'none';
-}
+});

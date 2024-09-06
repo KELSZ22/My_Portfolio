@@ -4,36 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>My Portfolio</title>
 </head>
 <body>
-
-
+    
     <nav>
-            <img  onclick=showNav() src="images/menu_icon.svg" alt="" class="menu-icon">
+        <div class="logo"> <img src="images/logo.png" alt="michael pogi" width="40px">
+        <img src="images/menu_icon.svg" alt="" class="menu-icon" id="menu-icon" >
+        </div>
 
-        <ul>
-            <div class="logo"><img src="images/pogi_logo.png" alt="" height="50px"></div>
-
-            <li><a href="#"><img src="images/home_icon.svg" alt="">  HOME</a></li>
-
-            <li><a href="#"><img src="images/resume_icon.svg" alt="">RESUME</a>
- 
-            </li>
-
-            <li><a href="#"><img src="images/about_icon.svg" alt=""> ABOUT</a></li>
-            <li><a href="#"><img src="images/contact_icon.svg" alt=""> CONTACT</a></li>
-            <img title="Switch to Light mode" src="images/dark_mode.svg" alt="" id="darkMode"> 
-            <img  onclick=closeNav() src="images/close_icon.svg" alt="" class="close-icon">
+        <ul class="nav-links" id="nav-links">
+            <li><a href=""> HOME</a></li>
+            <li><a href=""> ABOUT</a></li>
+            <li><a href=""> RESUME</a></li>
+            <li><a href="">CONTACT</a></li>
         </ul>
-        
     </nav>
 
     
     <script src="index.js">
 
-
-        
     </script>
 </body>
 </html>
