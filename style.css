@@ -7,18 +7,27 @@
 :root{
 
     --bg-color: #FAF9F6;
+    --secondary-color:#000000;
+    --nav-color:rgba(255, 255, 255, 0.9);
 }
 
 body{
     background-color: var(--bg-color);
     font-family: 'Courier New', Courier, monospace;
+    background-image: url('images/bg_portfolio.png');
+    background-position: center;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 nav{
-    background-color: antiquewhite;
+    background-color: var(--nav-color);
+    backdrop-filter: blur(20px) saturation(100%);
     height: 50px;
     width: 100%;
     z-index: 100;
+
 }
 
 nav ul{
@@ -43,7 +52,8 @@ nav a{
     align-items: center;
     text-decoration: none;
     padding: 0 10px;
- 
+    color: var(--secondary-color);
+    font-weight: bold;
     width: 100%;
 }
 nav .logo{
@@ -55,7 +65,7 @@ nav a::before{
     content:"";
     background-color: red;
     width: 0%;
-    height: 5px;
+    height: 2px;
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -83,6 +93,8 @@ width: 100%;
 
 .dark-theme{
     --bg-color:#1f1729;
+    --secondary-color:#fcba03;
+    --nav-color:rgba(31, 23, 41,0.9);
 }
 
 .container{
@@ -90,6 +102,7 @@ width: 100%;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row-reverse;
 
 }
 
@@ -97,6 +110,8 @@ width: 100%;
     display: flex;
     font-size: 2rem;
     flex-direction: column;
+    align-items: flex-start;
+    transition: all 1s;
 }
 
 
@@ -104,12 +119,51 @@ width: 100%;
 
 .image{
     width: 400px;
-    border-radius: 50px;
     margin-left: 50px;
+    
 }
 
 .image-content{
     margin: 40px;
+}
+
+.text-content p:first-child{
+
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+.text-content p:nth-child(2) {
+
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.text-content p:nth-child(3) {
+
+    font-size: 0.7em;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+button{
+
+    margin-top: 20px;
+    font-size: 20px;
+    width: 130px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.9s;
+}
+
+button:hover{
+
+    background-color: #7a00b3;
+    color: white;
+
 }
 
 
@@ -123,8 +177,8 @@ nav ul {
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: rgb(221, 221, 221);
-        position: absolute;
+        background-color: var(--nav-color);
+        backdrop-filter: blur(100px) saturation(120%);        position: absolute;
         top: 50px;
         left: 0;
         bottom: 120px;
@@ -146,8 +200,19 @@ nav ul {
         top: 10px;
         right: 20px;
     }
-
+    .image {
+            width: 200px;
+            margin-left: 50px;
     
+        }
+
+.container .text-content {
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+}
 
     
 }
