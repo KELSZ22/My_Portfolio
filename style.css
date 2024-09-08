@@ -63,7 +63,7 @@ nav .logo{
 
 nav a::before{
     content:"";
-    background-color: red;
+    background:linear-gradient(90deg, rgba(24, 0, 47, 1) 0%, rgba(134, 0, 250, 1) 50%, rgba(229, 168, 255, 1) 100%);
     width: 0%;
     height: 2px;
     position: absolute;
@@ -134,14 +134,14 @@ width: 100%;
 }
 .text-content p:nth-child(2) {
 
-    font-size: 1em;
+    font-size: .8em;
     color: var(--secondary-color);
     font-weight: bold;
 }
 .text-content p:nth-child(3) {
 
-    font-size: 0.7em;
-    color: var(--secondary-color);
+    font-size: 0.6em;
+    color: rgb(149, 58, 253);
     font-weight: bold;
 }
 
