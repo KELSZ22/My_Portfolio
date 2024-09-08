@@ -134,7 +134,7 @@ width: 100%;
 }
 .text-content p:nth-child(2) {
 
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--secondary-color);
     font-weight: bold;
 }
