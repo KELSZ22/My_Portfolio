@@ -32,11 +32,11 @@ darkTheme.onclick = () =>{
     document.body.classList.toggle("dark-theme")
         if(document.body.classList.contains("dark-theme")){
 
-            darkTheme.src="images/dark_mode.svg";
+            darkTheme.src="images/light_mode.svg";
 
         }
         else{
-            darkTheme.src="images/light_mode.svg";
+            darkTheme.src="images/dark_mode.svg";
 
         }
 
